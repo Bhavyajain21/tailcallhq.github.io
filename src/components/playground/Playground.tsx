@@ -4,6 +4,7 @@ import {analyticsHandler, isValidURL} from "@site/src/utils"
 import "graphiql/graphiql.css"
 import "../../css/graphiql.css"
 import {type FetcherParams, FetcherOpts} from "@graphiql/toolkit"
+import TailcallConfigForm from "./TailcallConfigForm"
 
 const useDebouncedValue = (inputValue: string, delay: number) => {
   const [debouncedValue, setDebouncedValue] = useState(inputValue)
@@ -74,6 +75,9 @@ const Playground = () => {
                 <></>
               </GraphiQL.Logo>
             </GraphiQL>
+          </div>
+          <div className="flex my-SPACE_03">
+            <TailcallConfigForm /> {/* Add the new form */}
           </div>
         </div>
       )}
